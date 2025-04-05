@@ -1,0 +1,11 @@
+.container{
+    display:flex;
+    border:1px black solid;
+    width: fit-content;
+}
+
+.container >div >div{
+    height:50px;
+    width:50px;
+    border:1px gray solid;
+}
