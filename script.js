@@ -1,22 +1,8 @@
-// function createGrid(numberOfSquares) {
-//     let container = document.querySelector(".container");
+let createButton = document.querySelector("#createGrid");
+createButton.addEventListener("click", ()=>createGrid());
+let clearButton=document.querySelector("#clearGrid");
+clearButton.addEventListener("click",clearGrid)
 
-//     for (let i = 1; i <= numberOfSquares; i++) {
-//         let row = document.createElement("div");
-//         row.classList.add(`column${i}`);
-//         for (let j = 1; j <= numberOfSquares; j++) {
-//             let temp = document.createElement("div");
-//             temp.classList.add(`box${j}`);
-//             row.appendChild(temp);
-//         }
-//         container.appendChild(row);
-//     }
-
-// }
-
-// createGrid(16);
-let button = document.querySelector("button");
-button.addEventListener("click", ()=>createGrid());
 
 
 
@@ -43,9 +29,26 @@ function createGrid(message = "enter number of squares(less than 100)") {
             column.classList.add(`row${i}`);
             column.classList.add(`column${j}`);
             column.classList.add("box");
+            column.addEventListener("mouseenter",changeStyle);
             row.appendChild(column);
         }
     }
     container.style.border = "1px solid black";
 
+}
+
+function changeStyle(event){
+    // event.target.setAttribute("style","background-color:red;");
+    event.target.style.backgroundColor="red";
+}
+
+
+
+function clearGrid(){
+    // document.querySelector(".box").setAttribute("style","background-color:bisque");
+    boxes=document.querySelectorAll(".box");
+    boxes.forEach((box) => {
+        box.style.backgroundColor="bisque";
+    });
+    
 }
