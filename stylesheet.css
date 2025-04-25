@@ -1,3 +1,9 @@
+/* body{
+    margin:0px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
 .container{
     display:flex;
     border:1px black solid;
@@ -8,4 +14,44 @@
     height:50px;
     width:50px;
     border:1px gray solid;
+} */
+
+body {
+    background-color: bisque;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+
+}
+
+
+button {
+    background-color: rgb(0, 145, 255);
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 700px;;
+    width:700px;
+}
+
+.container>div {
+    display: flex;
+    
+    
+}
+
+.box{
+    border:1px gray solid;
+    flex-grow:1;
 }
