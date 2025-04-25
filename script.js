@@ -38,14 +38,13 @@ function createGrid(message = "enter number of squares(less than 100)") {
 }
 
 function changeStyle(event){
-    // event.target.setAttribute("style","background-color:red;");
-    event.target.style.backgroundColor="red";
+    event.target.setAttribute("style","background-color:red;");
+    // event.target.style.backgroundColor="red";
 }
 
 
 
 function clearGrid(){
-    // document.querySelector(".box").setAttribute("style","background-color:bisque");
     boxes=document.querySelectorAll(".box");
     boxes.forEach((box) => {
         box.style.backgroundColor="bisque";
